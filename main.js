@@ -1,5 +1,5 @@
 //Data utilities
-//遇到空值就設定為undefined, 否則維持原本的字串
+//遇到空值就設定為undefined, 要不然就維持原本的字串
 const parseNA = string => (string == ' -' ? undefined : string);
 
 d3.csv('data/歷年國內主要觀光遊憩據點遊客人數月別統計.csv').then(
@@ -91,7 +91,7 @@ function setupCanvas(barChartData){
                     .attr('x',0).attr('y', d=>yScale(d.縣市別))
                     .attr('width', d=>xScale_v3(d.合計))
                     .attr('height', yScale.bandwidth())
-                    .style('fill', 'dodgerblue');
+                    .style('fill', 'LightSkyBlue');
 
     //Draw header
     const header = this_svg.append('g').attr('class','bar-header')
